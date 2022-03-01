@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | 3-column preview card component</title>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap" rel="stylesheet">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    body{
+      margin: 0%;
+      border: 0ch;
+      padding: 0%;
+      background-color: rgb(242, 242, 242);
+    }
+    .container{
+      background-color: rgb(242, 242, 242);
+      height: 745px;
+      width: 1536px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .content{
+      display: flex;
+      height: 485px;
+      width: 921px;
+      background-color: rrgb(242, 242, 242);
+      border-radius: 10px
+    }
+    .cards{
+      height: 485px;
+      width: 307px;
+      display: inline-block;
+    }
+    #cardOrange{
+      background-color: rgb(226, 133, 37);
+      border-radius: 10px 0 0 10px;
+    }
+    #cardGrey{
+      background-color: rgb(1, 105, 114);
+    }
+    #cardGreen{
+      background-color: rgb(0, 64, 63);
+      border-radius: 0 10px 10px 0;
+    }
+    .desc{
+      margin: 40px;
+      margin-right: 60px;
+      line-height: 25px;
+      font-size: 15px;
+      color: hsl(0, 0%, 95%);
+      font-family: 'Lexend Deca', sans-serif;
+      font-weight: 400;
+    }
+    button{
+      margin-top: 74px;
+    margin-left: 0;
+    height: 45px;
+    width: 150px;
+    border-radius: 23px;
+    background-color: hsl(0, 0%, 95%);
+    border: 0ch;
+    font-size: 15px;
+    font-weight: 400;
+
+    }
+    button:hover{
+      
+    background-color: inherit;
+    
+    
+    display: block;
+      border: solid hsl(0, 0%, 95%);
+      
+    }
+    h1{
+      font-family: 'Big Shoulders Display', cursive;
+      margin-bottom: 40px;
+      font-weight: 700;
+      color: hsla(0, 0%, 100%, 0.75)
+    }
+    #b1{
+      color: rgb(226, 133, 37);
+    }
+    #b1:hover{
+      color: hsl(0, 0%, 95%);
+    }
+    #b2{
+      color: rgb(1, 105, 114);
+    }
+    #b2:hover{
+      color: hsl(0, 0%, 95%);
+    }
+    #b3{
+      color: rgb(0, 64, 63);
+    }
+    #b3:hover{
+      color: hsl(0, 0%, 95%);
+    }
+    @media screen and (max-width: 500px) {
+      body{
+      margin: 0%;
+      border: 0ch;
+      padding: 0%;
+      background-color: rgb(242, 242, 242);
+    }
+    .container{
+      
+      height: 1600px;
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+      align-items:normal;
+    }
+    .content{
+      display: flex;
+      height: 485px;
+      width: 307px;
+      background-color: rgb(242, 242, 242);
+      border-radius: 10px;
+      flex-direction: column;
+      margin-top: 120px;
+    }
+    .cards{
+      height: 485px;
+      width: 307px;
+      display: inline-block;
+    }
+    #cardOrange{
+      background-color: rgb(226, 133, 37);
+      border-radius: 10px 10px 0 0;
+    }
+    #cardGrey{
+      background-color: rgb(1, 105, 114);
+    }
+    #cardGreen{
+      background-color: rgb(0, 64, 63);
+      border-radius: 0 0 10px 10px;
+    }
+    .desc{
+      margin: 40px;
+      margin-right: 60px;
+      line-height: 25px;
+      font-size: 15px;
+      color: hsl(0, 0%, 95%);
+      font-family: 'Lexend Deca', sans-serif;
+      font-weight: 400;
+    }
+    button{
+      margin-top: 74px;
+    margin-left: 0;
+    height: 45px;
+    width: 150px;
+    border-radius: 23px;
+    background-color: hsl(0, 0%, 95%);
+    border: 0ch;
+    font-size: 15px;
+    font-weight: 400;
+
+    }
+    button:hover{
+      
+    background-color: inherit;
+    
+    
+    display: block;
+      border: solid hsl(0, 0%, 95%);
+      
+    }
+    h1{
+      font-family: 'Big Shoulders Display', cursive;
+      margin-bottom: 40px;
+      font-weight: 700;
+      color: hsla(0, 0%, 100%, 0.75)
+    }
+    #b1{
+      color: rgb(226, 133, 37);
+    }
+    #b1:hover{
+      color: hsl(0, 0%, 95%);
+    }
+    #b2{
+      color: rgb(1, 105, 114);
+    }
+    #b2:hover{
+      color: hsl(0, 0%, 95%);
+    }
+    #b3{
+      color: rgb(0, 64, 63);
+    }
+    #b3:hover{
+      color: hsl(0, 0%, 95%);
+    }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="container">
+      <div class="content">
+        <div class="cards" id="cardOrange">
+          <div class="desc">
+            <img src="images/icon-sedans.svg" alt="">
+            <br>
+            <h1>Sedans</h1>
+              Choose a sedan for its affordability and excellent fuel economy. Ideal for cruising in the city or on your next road trip.
+            <button id="b1" >Learn More</button>
+          </div>
+          
+          
+        </div>
+        <div class="cards" id="cardGrey">
+          <div class="desc">
+            <img src="images/icon-suvs.svg" alt="">
+            <h1>SUVs</h1>
+            Take an SUV for its spacious interior, power, and versatility. Perfect for your next family vacation and off-road adventures.            
+            <button id="b2" >Learn More</button>
+          </div>
+         
+        </div>
+        <div class="cards" id="cardGreen">
+          <div class="desc">
+            <img src="images/icon-luxury.svg" alt="">
+            <h1>Luxury</h1>
+            Cruise in the best car brands without the bloated prices. Enjoy the enhanced comfort of a luxury rental and arrive in style.            
+            <button id="b3" >Learn More</button>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="#">Ch Mohit</a>.
+      </div>
+    </footer>
+  </main>
+</body>
+</html>
